@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glam Nails - Salón de Uñas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+
+    <style>
+        /* General */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        header {
+            background: #ff69b4;
+            position: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            color: white;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(165, 16, 16);
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        #home {
+            background: url('salon.jpg') no-repeat center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: rgb(5, 2, 5);
+            text-align: center;
+        }
+
+        .btn {
+            background: #ff1493;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Services */
+        #services {
+            padding: 50px;
+            text-align: center;
+            background: #ffe4e1;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 20px;
+            width: 30%;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Booking */
+        #booking {
+            padding: 50px;
+            text-align: center;
+            background: #ffb6c1;
+        }
+
+        form input, form button {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        form button {
+            background: #ff1493;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #ff69b4;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+    </style>
+
+    <header id="navbar">
+        <div class="logo">💅 Glam Nails</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#booking">Reservar</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="overlay"></div>
+        <h1 data-aos="fade-up">Bienvenida a Glam Nails</h1>
+        <p data-aos="fade-up" data-aos-delay="300">Tu belleza comienza con unas manos impecables.</p>
+        <a href="#booking" class="btn" data-aos="zoom-in" data-aos-delay="500">Reservar Cita</a>
+    </section>
+
+    <section id="services">
+        <h2 data-aos="fade-up">Nuestros Servicios</h2>
+        <div class="services-container">
+            <div class="service-card" data-aos="flip-left">
+                <img src="nail-art.jpg" alt="Diseño de uñas">
+                <h3>Diseño de Uñas</h3>
+                <p>Arte de uñas con las últimas tendencias.</p>
+            </div>
+            <div class="service-card" data-aos="flip-left" data-aos-delay="200">
+                <img src="manicure.jpg" alt="Manicure">
+                <h3>Manicure Premium</h3>
+                <p>Acabado perfecto para cada ocasión.</p>
+            </div>
+            <div class="service-card" data-aos="flip-left" data-aos-delay="400">
+                <img src="pedicure.jpg" alt="Pedicure">
+                <h3>Pedicure Spa</h3>
+                <p>Relajación y cuidado para tus pies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking">
+        <h2 data-aos="fade-up">Reserva tu Cita</h2>
+        <form id="appointment-form" data-aos="fade-up">
+            <input type="text" id="name" placeholder="Nombre completo" required>
+            <input type="tel" id="phone" placeholder="Teléfono" required>
+            <input type="date" id="date" required>
+            <button type="submit">Reservar</button>
+            <p id="confirmation-message"></p>
+        </form>
+    </section>
+
+    <footer id="contact">
+        <p>📍 Calle Falsa 123, Ciudad</p>
+        <p>📞 +52 123 456 7890</p>
+        <p>✉ contacto@glamnails.com</p>
+        <p>© 2025 Glam Nails. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
