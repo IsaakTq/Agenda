@@ -15,13 +15,29 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://aprende.com/wp-content/uploads/2023/06/Foto-4-10.jpg'); /* Reemplaza con la URL o ruta de la imagen */
-            background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
-            background-position: center; /* Centra la imagen */
-            background-attachment: fixed; /* La imagen queda fija al hacer scroll */
+            background-image: url('https://www.nosotras.com.mx/wp-content/uploads/2024/08/disenos-de-unas-en-3D-8.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             scroll-behavior: smooth;
             position: relative;
             overflow-x: hidden;
+            
+        }
+
+        /* Navbar */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.445);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            color: white;
+            z-index: 10;
+            
         }
 
         #particles-js {
@@ -33,19 +49,6 @@
             z-index: -1;
         }
 
-        /* Navbar */
-        header {
-
-            position: sticky;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 15px;
-            color: white;
-            transition: all 0.3s ease-in-out;
-            z-index: 10;
-        }
-
         .logo {
             font-size: 24px;
             font-weight: bold;
@@ -55,6 +58,8 @@
             list-style: none;
             display: flex;
             gap: 20px;
+            padding: 0;
+            margin: 0;
         }
 
         nav ul li a {
@@ -73,6 +78,7 @@
             text-align: center;
             color: white;
             padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
         }
 
         .btn {
@@ -92,20 +98,18 @@
         }
 
         .services-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
+            justify-content: center;
         }
 
         .service-card {
             background: white;
             padding: 20px;
-            width: 90%;
-            max-width: 300px;
             border-radius: 10px;
-            transition: transform 0.3s ease-in-out;
             text-align: center;
+            transition: transform 0.3s ease-in-out;
         }
 
         .service-card:hover {
@@ -114,8 +118,10 @@
 
         /* Booking */
         #booking {
+            color: white;
             padding: 50px;
             text-align: center;
+            background: rgba(0, 0, 0, 0.445);
         }
 
         form input, form button {
@@ -143,18 +149,15 @@
         }
 
         /* Responsive */
-        @media (min-width: 768px) {
-            .services-container {
-                flex-direction: row;
-            }
-
-            .service-card {
-                width: 30%;
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
             }
         }
     </style>
-    <div id="particles-js"></div>
-    <header id="navbar">
+    
+    <header>
         <div class="logo">Glam Nails</div>
         <nav>
             <ul>
