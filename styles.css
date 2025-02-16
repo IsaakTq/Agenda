@@ -4,9 +4,9 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('https://www.nosotras.com.mx/wp-content/uploads/2024/08/disenos-de-unas-en-3D-8.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-size: cover; /* Mantiene la imagen cubriendo toda la pantalla */
+    background-position: center; /* Centra la imagen para que se vea bien */
+    background-attachment: fixed; /* Fija la imagen al fondo al hacer scroll */
     scroll-behavior: smooth;
     height: 100%;
 }
@@ -31,7 +31,7 @@ header {
     justify-content: center;
     text-align: center;
     color: white;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro para mejorar la legibilidad del texto */
 }
 
 /* Services */
@@ -95,4 +95,28 @@ footer {
     background: #6A0DAD;
     color: white;
     text-align: center;
+}
+
+/* Media Queries - Responsiveness */
+
+/* Para dispositivos pequeños, ajustamos la visibilidad de la imagen */
+@media (max-width: 767px) {
+    body {
+        background-position: top; /* En pantallas pequeñas, cambia la posición para mostrar la parte superior de la imagen */
+    }
+    
+    #home {
+        background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente para que el texto se vea bien */
+    }
+}
+
+/* Para dispositivos de tamaño medio, ajustamos la imagen y el contenido */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-position: center center; /* Asegura que la imagen se centre bien */
+    }
+
+    #home {
+        background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente para que el texto se vea bien */
+    }
 }
