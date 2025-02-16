@@ -1,55 +1,124 @@
 /* General */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('https://content20.lecturas.com/medio/2024/12/19/unas-2025_0ae9f28a_241219082102_1280x720.webp');
-    background-size: cover; /* Mantiene la imagen cubriendo toda la pantalla */
-    background-position: center; /* Asegura que la imagen siempre esté centrada */
-    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+    background-image: url('https://www.nosotras.com.mx/wp-content/uploads/2024/08/disenos-de-unas-en-3D-8.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     scroll-behavior: smooth;
     height: 100%;
-}
-
-/* Navbar */
-header {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px 20px;
-}
-
-.w3-bar-item {
-    font-size: 20px;
-    color: white !important;
+    animation: fadeInMove 2s ease-out forwards;
 }
 
 /* Hero Section */
 #home {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     color: white;
-    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente para mejorar la legibilidad del texto */
+    background: rgba(0, 0, 0, 0.5);
 }
 
-/* Services */
+#home h1 {
+    font-size: 3rem;
+}
+
+#home p {
+    font-size: 1.5rem;
+}
+
+#home a {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+/* Menú principal */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+header .logo {
+    font-size: 24px;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Menú hamburguesa (solo visible en pantallas pequeñas) */
+#hamburgerMenu {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Menú móvil */
+#mobileMenu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    text-align: center;
+}
+
+#mobileMenu ul {
+    padding: 0;
+    margin: 0;
+}
+
+#mobileMenu ul li {
+    padding: 10px 0;
+}
+
+#mobileMenu ul li a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* Servicios */
 #services {
     padding: 50px 20px;
     background: rgba(255, 255, 255, 0.9);
+    text-align: center;
 }
 
-.w3-card {
+.services-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.service {
     padding: 20px;
     transition: transform 0.3s ease-in-out;
 }
 
-.w3-card:hover {
+.service:hover {
     transform: scale(1.05);
 }
 
-/* Booking Form */
+/* Reserva */
 #booking {
     padding: 50px 20px;
     color: white;
@@ -97,62 +166,44 @@ footer {
     text-align: center;
 }
 
-/* Responsividad: Dispositivos pequeños (teléfonos) */
-@media (max-width: 767px) {
-    body {
-        background-position: top; /* Mueve la imagen hacia la parte superior para que se vea mejor en pantallas pequeñas */
+/* Animación de entrada */
+@keyframes fadeInMove {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
     }
-
-    #home {
-        background: rgba(0, 0, 0, 0.6); /* Aumenta la opacidad del fondo para mejor legibilidad */
-        padding: 40px 10px;
-    }
-
-    #home h1 {
-        font-size: 30px; /* Ajusta el tamaño del texto */
-    }
-
-    #home p {
-        font-size: 18px; /* Ajusta el tamaño del texto */
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* Responsividad: Dispositivos medianos (tabletas) */
-@media (min-width: 768px) and (max-width: 1024px) {
-    body {
-        background-position: center center; /* Mantiene la imagen centrada */
+/* Responsividad: Pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Esconde el menú para pantallas pequeñas */
     }
 
-    #home {
-        background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
-        padding: 50px 20px;
+    #hamburgerMenu {
+        display: block; /* Muestra el ícono del menú hamburguesa */
     }
 
-    #home h1 {
-        font-size: 40px; /* Ajusta el tamaño del texto */
-    }
-
-    #home p {
-        font-size: 22px; /* Ajusta el tamaño del texto */
+    #mobileMenu {
+        display: block; /* Muestra el menú móvil cuando está activado */
     }
 }
 
 /* Responsividad: Pantallas grandes */
-@media (min-width: 1025px) {
-    body {
-        background-position: center; /* Mantiene la imagen centrada */
-    }
-
+@media (min-width: 1024px) {
     #home {
-        background: rgba(0, 0, 0, 0.4); /* Fondo oscuro con menos opacidad */
-        padding: 70px 20px;
+        background: rgba(0, 0, 0, 0.5);
     }
 
-    #home h1 {
-        font-size: 50px; /* Ajusta el tamaño del texto */
+    header .logo {
+        font-size: 28px;
     }
 
-    #home p {
-        font-size: 24px; /* Ajusta el tamaño del texto */
+    nav ul {
+        display: flex;
     }
 }

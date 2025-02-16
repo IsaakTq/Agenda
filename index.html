@@ -4,65 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glam Nails - Salón de Uñas</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
-    
-    <header class="w3-bar">
-        <div class="w3-bar-item w3-xlarge">Glam Nails</div>
-        <nav class="w3-right">
-            <a href="#home" class="w3-bar-item w3-button">Inicio</a>
-            <a href="#services" class="w3-bar-item w3-button">Servicios</a>
-            <a href="#booking" class="w3-bar-item w3-button">Reservar</a>
-            <a href="#contact" class="w3-bar-item w3-button">Contacto</a>
+    <!-- Header con logo y menú principal -->
+    <header>
+        <div class="logo">Glam Nails</div>
+        <!-- Menú principal -->
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#booking">Reservar</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
         </nav>
+
+        <!-- Menú hamburguesa -->
+        <div id="hamburgerMenu" class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
     </header>
 
+    <!-- Sección de bienvenida -->
     <section id="home">
-        <h1 data-aos="fade-up">Bienvenida a Glam Nails</h1>
-        <p data-aos="fade-up" data-aos-delay="300">Tu belleza comienza con unas manos impecables.</p>
-        <a href="#services" class="w3-link" data-aos="zoom-in" data-aos-delay="500">Revisa nuestros servicios</a>
+        <h1>Bienvenida a Glam Nails</h1>
+        <p>Tu belleza comienza con unas manos impecables.</p>
+        <a href="#services">Revisa nuestros servicios</a>
     </section>
 
+    <!-- Sección de servicios -->
     <section id="services">
-        <h2 class="w3-center" data-aos="fade-up">Nuestros Servicios</h2>
-        <div class="w3-row-padding w3-center">
-            <div class="w3-third w3-margin-bottom" data-aos="flip-left">
-                <div class="w3-card">
-                    <h3>Diseño de Uñas</h3>
-                    <p>Arte de uñas con las últimas tendencias.</p>
-                </div>
+        <h2>Nuestros Servicios</h2>
+        <div class="services-container">
+            <div class="service">
+                <h3>Diseño de Uñas</h3>
+                <p>Arte de uñas con las últimas tendencias.</p>
             </div>
-            <div class="w3-third w3-margin-bottom" data-aos="flip-left" data-aos-delay="200">
-                <div class="w3-card">
-                    <h3>Manicure Premium</h3>
-                    <p>Acabado perfecto para cada ocasión.</p>
-                </div>
+            <div class="service">
+                <h3>Manicure Premium</h3>
+                <p>Acabado perfecto para cada ocasión.</p>
             </div>
-            <div class="w3-third w3-margin-bottom" data-aos="flip-left" data-aos-delay="400">
-                <div class="w3-card">
-                    <h3>Pedicure Spa</h3>
-                    <p>Relajación y cuidado para tus pies.</p>
-                </div>
+            <div class="service">
+                <h3>Pedicure Spa</h3>
+                <p>Relajación y cuidado para tus pies.</p>
             </div>
         </div>
     </section>
 
+    <!-- Sección de reserva -->
     <section id="booking">
-        <h2 data-aos="fade-up" class="w3-center">Reserva tu Cita</h2>
-        <div>
-            <form id="appointment-form" data-aos="fade-up">
-                <input type="text" placeholder="Nombre completo" required>
-                <input type="tel" placeholder="Teléfono" required>
-                <input type="date" required>
-                <button type="submit">Reservar</button>
-            </form>
-        </div>
+        <h2>Reserva tu Cita</h2>
+        <form id="appointment-form">
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="tel" placeholder="Teléfono" required>
+            <input type="date" required>
+            <button type="submit">Reservar</button>
+        </form>
     </section>
 
+    <!-- Sección de contacto -->
     <footer id="contact">
         <p>📍 Calle Falsa 123, Ciudad</p>
         <p>📞 +52 123 456 7890</p>
@@ -70,7 +71,16 @@
         <p>© 2025 Glam Nails. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>AOS.init();</script>
+    <!-- Menú móvil -->
+    <div id="mobileMenu" class="mobile-menu">
+        <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#booking">Reservar</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
