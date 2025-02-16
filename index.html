@@ -4,273 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glam Nails - Salón de Uñas</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <style>
-        /* General */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-image: url('https://www.nosotras.com.mx/wp-content/uploads/2024/08/disenos-de-unas-en-3D-8.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
-            padding: 0; /* Elimina cualquier padding extra */
-            margin: 0; /* Elimina cualquier margen extra */
-        }
     
-        /* Navbar */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            color: white;
-            z-index: 10;
-        }
-    
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-    
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-    
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            padding: 0;
-            margin: 0;
-        }
-    
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            font-size: 16px;
-        }
-    
-        /* Hero Section */
-        #home {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
-        }
-    
-        .btn {
-            background: #8A2BE2;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 16px;
-        }
-    
-        /* Services */
-        #services {
-            padding: 50px;
-            text-align: center;
-            background: #E6E6FA;
-        }
-    
-        .services-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            justify-content: center;
-        }
-    
-        .service-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-        }
-    
-        .service-card:hover {
-            transform: scale(1.05);
-        }
-    
-        /* Booking */
-        #booking {
-            color: white;
-            padding: 50px;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.6);
-        }
-    
-        form input, form button {
-            display: block;
-            width: 90%;
-            max-width: 400px;
-            margin: 10px auto;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-    
-        form button {
-            background: #8A2BE2;
-            color: white;
-        }
-    
-        /* Footer */
-        footer {
-            background: #6A0DAD;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .logo {
-                font-size: 22px;
-            }
-    
-            nav ul {
-                gap: 15px;
-            }
-    
-            nav ul li a {
-                font-size: 14px;
-            }
-    
-            #home {
-                padding: 40px 20px;
-            }
-    
-            .btn {
-                font-size: 14px;
-            }
-    
-            #services {
-                padding: 30px;
-            }
-    
-            #booking {
-                padding: 30px;
-            }
-        }
-    
-        @media (max-width: 768px) {
-            header {
-                padding: 10px;
-            }
-    
-            .logo {
-                font-size: 20px;
-            }
-    
-            nav ul {
-                flex-direction: column;
-                text-align: center;
-                gap: 10px;
-            }
-    
-            nav ul li a {
-                font-size: 16px;
-            }
-    
-            #home {
-                padding: 20px 10px;
-            }
-    
-            .btn {
-                font-size: 16px;
-            }
-    
-            #services {
-                padding: 20px;
-            }
-    
-            #booking {
-                padding: 20px;
-            }
-    
-            footer {
-                padding: 15px;
-            }
-        }
-    
-        @media (max-width: 480px) {
-            .service-card {
-                padding: 15px;
-            }
-    
-            form input, form button {
-                width: 100%;
-                padding: 8px;
-            }
-        }
-    </style>
-    
-    
-    <header>
-        <div class="logo">Glam Nails</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Inicio</a></li><li><a href="#services">Servicios</a></li><li><a href="#booking">Reservar</a></li><li><a href="#contact">Contacto</a></li>
-            </ul>
+    <header class="w3-bar">
+        <div class="w3-bar-item w3-xlarge">Glam Nails</div>
+        <nav class="w3-right">
+            <a href="#home" class="w3-bar-item w3-button">Inicio</a>
+            <a href="#services" class="w3-bar-item w3-button">Servicios</a>
+            <a href="#booking" class="w3-bar-item w3-button">Reservar</a>
+            <a href="#contact" class="w3-bar-item w3-button">Contacto</a>
         </nav>
     </header>
 
     <section id="home">
         <h1 data-aos="fade-up">Bienvenida a Glam Nails</h1>
         <p data-aos="fade-up" data-aos-delay="300">Tu belleza comienza con unas manos impecables.</p>
-        <a href="#booking" class="btn" data-aos="zoom-in" data-aos-delay="500">Reservar Cita</a>
+        <a href="#services" class="w3-link" data-aos="zoom-in" data-aos-delay="500">Revisa nuestros servicios</a>
     </section>
 
     <section id="services">
-        <h2 data-aos="fade-up">Nuestros Servicios</h2>
-        <div class="services-container">
-            <div class="service-card" data-aos="flip-left">
-                <h3>Diseño de Uñas</h3>
-                <p>Arte de uñas con las últimas tendencias.</p>
+        <h2 class="w3-center" data-aos="fade-up">Nuestros Servicios</h2>
+        <div class="w3-row-padding w3-center">
+            <div class="w3-third w3-margin-bottom" data-aos="flip-left">
+                <div class="w3-card">
+                    <h3>Diseño de Uñas</h3>
+                    <p>Arte de uñas con las últimas tendencias.</p>
+                </div>
             </div>
-            <div class="service-card" data-aos="flip-left" data-aos-delay="200">
-                <h3>Manicure Premium</h3>
-                <p>Acabado perfecto para cada ocasión.</p>
+            <div class="w3-third w3-margin-bottom" data-aos="flip-left" data-aos-delay="200">
+                <div class="w3-card">
+                    <h3>Manicure Premium</h3>
+                    <p>Acabado perfecto para cada ocasión.</p>
+                </div>
             </div>
-            <div class="service-card" data-aos="flip-left" data-aos-delay="400">
-                <h3>Pedicure Spa</h3>
-                <p>Relajación y cuidado para tus pies.</p>
+            <div class="w3-third w3-margin-bottom" data-aos="flip-left" data-aos-delay="400">
+                <div class="w3-card">
+                    <h3>Pedicure Spa</h3>
+                    <p>Relajación y cuidado para tus pies.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="booking">
-        <h2 data-aos="fade-up">Reserva tu Cita</h2>
-        <form id="appointment-form" data-aos="fade-up">
-            <input type="text" id="name" placeholder="Nombre completo" required>
-            <input type="tel" id="phone" placeholder="Teléfono" required>
-            <input type="date" id="date" required>
-            <button type="submit">Reservar</button>
-        </form>
+        <h2 data-aos="fade-up" class="w3-center">Reserva tu Cita</h2>
+        <div>
+            <form id="appointment-form" data-aos="fade-up">
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="tel" placeholder="Teléfono" required>
+                <input type="date" required>
+                <button type="submit">Reservar</button>
+            </form>
+        </div>
     </section>
 
     <footer id="contact">
