@@ -5,8 +5,8 @@ body {
     padding: 0;
     background-image: url('https://www.nosotras.com.mx/wp-content/uploads/2024/08/disenos-de-unas-en-3D-8.jpg');
     background-size: cover; /* Mantiene la imagen cubriendo toda la pantalla */
-    background-position: center; /* Centra la imagen para que se vea bien */
-    background-attachment: fixed; /* Fija la imagen al fondo al hacer scroll */
+    background-position: center; /* Asegura que la imagen siempre esté centrada */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
     scroll-behavior: smooth;
     height: 100%;
 }
@@ -31,7 +31,7 @@ header {
     justify-content: center;
     text-align: center;
     color: white;
-    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro para mejorar la legibilidad del texto */
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente para mejorar la legibilidad del texto */
 }
 
 /* Services */
@@ -97,26 +97,62 @@ footer {
     text-align: center;
 }
 
-/* Media Queries - Responsiveness */
-
-/* Para dispositivos pequeños, ajustamos la visibilidad de la imagen */
+/* Responsividad: Dispositivos pequeños (teléfonos) */
 @media (max-width: 767px) {
     body {
-        background-position: top; /* En pantallas pequeñas, cambia la posición para mostrar la parte superior de la imagen */
+        background-position: top; /* Mueve la imagen hacia la parte superior para que se vea mejor en pantallas pequeñas */
     }
-    
+
     #home {
-        background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente para que el texto se vea bien */
+        background: rgba(0, 0, 0, 0.6); /* Aumenta la opacidad del fondo para mejor legibilidad */
+        padding: 40px 10px;
+    }
+
+    #home h1 {
+        font-size: 30px; /* Ajusta el tamaño del texto */
+    }
+
+    #home p {
+        font-size: 18px; /* Ajusta el tamaño del texto */
     }
 }
 
-/* Para dispositivos de tamaño medio, ajustamos la imagen y el contenido */
+/* Responsividad: Dispositivos medianos (tabletas) */
 @media (min-width: 768px) and (max-width: 1024px) {
     body {
-        background-position: center center; /* Asegura que la imagen se centre bien */
+        background-position: center center; /* Mantiene la imagen centrada */
     }
 
     #home {
-        background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente para que el texto se vea bien */
+        background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+        padding: 50px 20px;
+    }
+
+    #home h1 {
+        font-size: 40px; /* Ajusta el tamaño del texto */
+    }
+
+    #home p {
+        font-size: 22px; /* Ajusta el tamaño del texto */
+    }
+}
+
+/* Responsividad: Pantallas grandes */
+@media (min-width: 1025px) {
+    body {
+        background-position: center; /* Mantiene la imagen centrada */
+    }
+
+    #home {
+        background: rgba(0, 0, 0, 0.4); /* Fondo oscuro con menos opacidad */
+        padding: 70px 20px;
+    }
+
+    #home h1 {
+        font-size: 50px; /* Ajusta el tamaño del texto */
+    }
+
+    #home p {
+        font-size: 24px; /* Ajusta el tamaño del texto */
     }
 }
