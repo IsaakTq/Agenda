@@ -48,14 +48,9 @@ header {
     max-width: 400px;
     border-radius: 8px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-    margin: 0 auto; /* Asegura que se centre horizontalmente */
-    position: absolute; /* Permite el posicionamiento absoluto */
-    top: 50%; /* Mueve el formulario hacia el centro vertical */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Ajuste para centrar perfectamente */
+    margin: 20px auto;
 }
 
-/* Título del formulario */
 #login h2 {
     font-size: 28px;
     margin-bottom: 20px;
@@ -108,6 +103,9 @@ header {
     font-size: 16px;
     cursor: pointer;
     margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: background-color 0.3s;
 }
 
@@ -115,24 +113,55 @@ header {
     background-color: #c1351d;
 }
 
-/* Responsive Design */
+/* Imagen del logo de Google dentro del botón */
+#google-login img {
+    width: 24px;  /* Tamaño adecuado del icono */
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Estilo para el texto de "¿No tienes cuenta?" */
+#login p {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+#login p a {
+    color: #8A2BE2;
+    text-decoration: none;
+}
+
+#login p a:hover {
+    text-decoration: underline;
+}
+
+/* Ajustes para dispositivos móviles */
 @media screen and (max-width: 768px) {
-    /* Ajustar tamaños de los elementos en pantallas pequeñas */
-    #home {
-        padding: 50px 20px;
+    #login {
+        width: 90%;
+        max-width: 350px;
     }
 
     #login h2 {
-        font-size: 28px;
+        font-size: 24px;
     }
 
-    #login form {
-        padding: 20px;
+    #login form input {
+        font-size: 14px;
     }
 
-    #login form input, #login form button, #google-login {
+    #login form button {
+        font-size: 14px;
+    }
+
+    #google-login {
         font-size: 14px;
         padding: 12px;
+    }
+
+    #google-login img {
+        width: 20px; /* Reducir tamaño del icono en móvil */
+        margin-right: 8px;
     }
 }
 

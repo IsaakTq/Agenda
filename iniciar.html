@@ -10,25 +10,23 @@
         <script defer src="script.js"></script>
     </head>
     <body>
-        <section id="home">
-            <!-- Formulario de inicio de sesión centrado -->
-            <section id="login" class="w3-container w3-center" data-aos="fade-up" data-aos-delay="300" style="height: auto; padding-top: 50px;">
-                <div id="login-form" data-aos="zoom-in" data-aos-delay="700">
-                    <h2>Iniciar Sesión</h2>
-                    <form action="" method="POST">
-                        <input type="email" name="email" placeholder="Correo electrónico" required><br><br>
-                        <input type="password" name="password" placeholder="Contraseña" required><br><br>
-                        <button type="submit">Iniciar sesión</button>
-                    </form>
-                    <p>¿No tienes cuenta? <a href="#signup">Registrarse</a></p>
-                    <button id="google-login">
-                        <img src="https://static.vecteezy.com/system/resources/previews/042/165/816/non_2x/google-logo-transparent-free-png.png" alt="Google" style="width: 5px; margin-right: 5px;">
-                        Iniciar sesión con Google
-                    </button>
-                </div>
-            </section>
-        </section>
+        <!-- Formulario de Login -->
+        <section id="login">
+            <h2>Iniciar sesión</h2>
+            <form>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit">Iniciar sesión</button>
+            </form>
 
+            <!-- Botón de Google -->
+            <button id="google-login">
+                <img src="https://static.vecteezy.com/system/resources/previews/042/165/816/non_2x/google-logo-transparent-free-png.png" alt="Google" style="width: 20px; margin-right: 10px;">
+                Iniciar sesión con Google
+            </button>
+
+            <p>¿No tienes cuenta? <a href="#register">Regístrate aquí</a></p>
+        </section>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
         <script>AOS.init();</script>
 
