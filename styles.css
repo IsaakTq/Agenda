@@ -274,10 +274,31 @@ footer {
         display: none;
     }
 
+    /* Menú hamburguesa en móvil */
     #mobile-menu {
         display: none;
     }
 
+    .w3-bar-block a {
+        font-size: 18px;
+        padding: 15px;
+        color: white;
+    }
+
+    /* Botón de iniciar sesión y registrarse */
+    #w3-bar-item.auth-links a {
+        background-color: #6A0DAD;
+        color: white;
+        border-radius: 5px;
+        padding: 12px;
+        text-align: center;
+        margin: 10px 0;
+        text-decoration: none;
+    }
+
+    #w3-bar-item.auth-links a:hover {
+        background-color: #500A88;
+    }
     .w3-bar-item {
         font-size: 18px;
     }

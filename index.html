@@ -10,7 +10,6 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    
     <header class="w3-bar">
         <div class="w3-bar-item w3-xlarge">Glam Nails</div>
     
@@ -41,13 +40,24 @@
         <div class="w3-right w3-button w3-bar-item w3-large w3-hide-large" onclick="toggleMenu()">☰</div>
       </header>
     
-    <!-- Menú de navegación móvil -->
-    <div id="mobile-menu" class="w3-hide w3-bar-block w3-large w3-hide-large">
-        <a href="#home" class="w3-bar-item w3-button">Inicio</a>
-        <a href="#services" class="w3-bar-item w3-button">Servicios</a>
-        <a href="#booking" class="w3-bar-item w3-button">Reservar</a>
-        <a href="#contact" class="w3-bar-item w3-button">Contacto</a>
-    </div>
+        <!-- Menú de navegación móvil -->
+        <div id="mobile-menu" class="w3-hide w3-bar-block w3-large w3-hide-large">
+            <a href="#home" class="w3-bar-item w3-button">Inicio</a>
+            <a href="#services" class="w3-bar-item w3-button">Servicios</a>
+            <a href="#booking" class="w3-bar-item w3-button">Reservar</a>
+            <a href="#contact" class="w3-bar-item w3-button">Contacto</a>
+
+            <!-- Si el usuario no ha iniciado sesión, mostrar los botones de iniciar sesión y registrarse -->
+            <div id="auth-links">
+                <a href="iniciar.html" class="w3-bar-item w3-button">Iniciar sesión</a>
+            </div>
+
+            <!-- Si el usuario ha iniciado sesión, mostrar el botón de cerrar sesión o el nombre de usuario -->
+            <div id="user-links" style="display:none;">
+                <a href="#logout" class="w3-bar-item w3-button">Cerrar sesión</a>
+                <span id="username" class="w3-bar-item"></span>
+            </div>
+        </div>
     
 
     <section id="home">
@@ -169,7 +179,51 @@
             var json = JSON.stringify(data);
             console.log(json);
         });
+
+            // Función para mostrar/ocultar el menú de perfil
+        function toggleProfileMenu() {
+            var profileMenu = document.getElementById("profile-menu");
+            if (profileMenu.style.display === "none" || profileMenu.style.display === "") {
+                profileMenu.style.display = "block";
+            } else {
+                profileMenu.style.display = "none";
+            }
+        }
+
+        // Simulación de estado de sesión (esto es solo para efectos demostrativos)
+        var isLoggedIn = false; // Cambiar esto según si el usuario está logueado o no
+
+        if (isLoggedIn) {
+            document.getElementById("login-signup-buttons").style.display = "none"; // Oculta los botones de login/signup
+            document.getElementById("user-profile").style.display = "inline-block"; // Muestra el ícono de perfil
+        } else {
+            document.getElementById("login-signup-buttons").style.display = "inline-block"; // Muestra los botones de login/signup
+            document.getElementById("user-profile").style.display = "none"; // Oculta el ícono de perfil
+        }
+
+        // Esta variable simula si el usuario ha iniciado sesión o no
+        var isLoggedIn = false; // Cambia esto según el estado real de sesión
+
+        // Función para mostrar/ocultar elementos según el estado de sesión
+        function updateMenu() {
+            var authLinks = document.getElementById('auth-links');
+            var userLinks = document.getElementById('user-links');
+            var username = document.getElementById('username');
+
+            if (isLoggedIn) {
+                authLinks.style.display = 'none'; // Ocultar botones de iniciar sesión y registrarse
+                userLinks.style.display = 'block'; // Mostrar opciones de usuario (cerrar sesión o nombre de usuario)
+                username.textContent = 'Bienvenido, Usuario'; // Opcional: muestra el nombre del usuario si tienes esa información
+            } else {
+                authLinks.style.display = 'block'; // Mostrar botones de iniciar sesión y registrarse
+                userLinks.style.display = 'none'; // Ocultar opciones de usuario
+            }
+        }
+
+        // Llamamos a la función para inicializar el estado del menú
+        updateMenu();
     </script>
+    
 
 </body>
 </html>
