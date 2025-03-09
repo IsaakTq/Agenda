@@ -13,18 +13,33 @@
     
     <header class="w3-bar">
         <div class="w3-bar-item w3-xlarge">Glam Nails</div>
-        
+    
         <!-- Menú normal en PC -->
         <nav id="desktop-menu" class="w3-right w3-hide-small w3-hide-medium">
-            <a href="#home" class="w3-bar-item w3-button">Inicio</a>
-            <a href="#services" class="w3-bar-item w3-button">Servicios</a>
-            <a href="#booking" class="w3-bar-item w3-button">Reservar</a>
-            <a href="#contact" class="w3-bar-item w3-button">Contacto</a>
+          <a href="#home" class="w3-bar-item w3-button">Inicio</a>
+          <a href="#services" class="w3-bar-item w3-button">Servicios</a>
+          <a href="#booking" class="w3-bar-item w3-button">Reservar</a>
+          <a href="#contact" class="w3-bar-item w3-button">Contacto</a>
+    
+          <!-- Aquí se muestra la foto de perfil o los botones de login/signup dependiendo del estado de sesión -->
+          <div class="w3-bar-item">
+            <div id="user-profile" class="w3-dropdown-click">
+              <button class="w3-button w3-purple w3-circle" onclick="toggleProfileMenu()">👤</button>
+              <div id="profile-menu" class="w3-dropdown-content w3-bar-block w3-card-4" style="display: none;">
+                <a href="#profile" class="w3-bar-item w3-button">Ver Perfil</a>
+                <a href="#logout" class="w3-bar-item w3-button">Cerrar sesión</a>
+              </div>
+            </div>
+          </div>
+          <div id="login-signup-buttons" class="w3-bar-item">
+            <a href="iniciar.html" class="w3-bar-item w3-button">Iniciar sesión</a>
+            <a href="#signup" class="w3-bar-item w3-button">Registrarse</a>
+          </div>
         </nav>
     
         <!-- Botón de menú hamburguesa solo en móviles -->
-        <div class="w3-right w3-button w3-bar-item w3-large w3-hide-large" onclick="toggleMenu()">&#9776;</div>
-    </header>
+        <div class="w3-right w3-button w3-bar-item w3-large w3-hide-large" onclick="toggleMenu()">☰</div>
+      </header>
     
     <!-- Menú de navegación móvil -->
     <div id="mobile-menu" class="w3-hide w3-bar-block w3-large w3-hide-large">
@@ -48,18 +63,21 @@
                 <div class="w3-card">
                     <h3>Diseño de Uñas</h3>
                     <p>Arte de uñas con las últimas tendencias.</p>
+                    <a href="hola.html" class="w3-button w3-purple"> ver mas</a>
                 </div>
             </div>
             <div class="w3-third w3-margin-bottom" data-aos="flip-left" data-aos-delay="200">
                 <div class="w3-card">
                     <h3>Manicure Premium</h3>
                     <p>Acabado perfecto para cada ocasión.</p>
+                    <a href="hola.html" class="w3-button w3-purple"> ver mas</a>
                 </div>
             </div>
             <div class="w3-third w3-margin-bottom" data-aos="flip-left" data-aos-delay="400">
                 <div class="w3-card">
                     <h3>Pedicure Spa</h3>
                     <p>Relajación y cuidado para tus pies.</p>
+                    <a href="hola.html" class="w3-button w3-purple"> ver mas</a>
                 </div>
             </div>
         </div>
@@ -127,5 +145,31 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>AOS.init();</script>
+
+    <script>
+        
+        // Función para mostrar/ocultar menú en móviles
+        function toggleMenu() {
+            var menu = document.getElementById("mobile-menu");
+            if (menu.classList.contains("w3-hide")) {
+                menu.classList.remove("w3-hide");
+            } else {
+                menu.classList.add("w3-hide");
+            }
+        }
+        
+        // Función para enviar datos del formulario
+        document.getElementById("appointment-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var formData = new FormData(event.target);
+            var data = {};
+            formData.forEach(function(value, key){
+                data[key] = value;
+            });
+            var json = JSON.stringify(data);
+            console.log(json);
+        });
+    </script>
+
 </body>
 </html>

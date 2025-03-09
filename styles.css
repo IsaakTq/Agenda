@@ -3,12 +3,12 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('https://media.vogue.mx/photos/6777ff218be4f492d7d8fbcf/2:3/w_2560%2Cc_limit/unas-manicure-disenos-para-enero-2025.jpg');
+    background-image: url('https://wallpapers.com/images/featured/arte-de-unas-rosa-hhah7ws5amjr2okk.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    scroll-behavior: smooth;
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 /* Navbar */
@@ -36,127 +36,104 @@ header {
     background: rgba(0, 0, 0, 0.5);
 }
 
-/* Services */
-#services {
-    padding: 50px 20px;
-    background: rgba(255, 255, 255, 0.9);
-}
-
-.w3-card {
-    padding: 20px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.w3-card:hover {
-    transform: scale(1.05);
-}
-
-/* Sección de Membresías */
-#memberships {
-    padding: 50px 20px;
-    background: rgba(255, 255, 255, 0.9);
-}
-
-/* Estilo de las cards */
-.membership-card {
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.membership-card:hover {
-    transform: scale(1.05);
-}
-
-/* Resaltar la membresía Premium */
-.membership-highlight {
-    background: #8A2BE2;
-    color: white;
-}
-
-.membership-super{
-    background:  #FFDB58;
-}
-
-.membership-btn {
-    background: #6A0DAD;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.membership-btn:hover {
-    background: #500A88;
-}
-
-.botonbasic{
-    background: #1bb15e;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.botonvip{
-    background: #dab83d;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
-}
-
-/* Booking Form */
-#booking {
-    padding: 50px 20px;
-    color: white;
-    background: rgba(0, 0, 0, 0.6);
-}
-
-#appointment-form {
+/* Formulario de inicio de sesión */
+#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 40px;
     width: 100%;
     max-width: 400px;
-    margin: 0 auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Asegura que se centre horizontalmente */
+    position: absolute; /* Permite el posicionamiento absoluto */
+    top: 50%; /* Mueve el formulario hacia el centro vertical */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ajuste para centrar perfectamente */
 }
 
-#appointment-form input {
+/* Título del formulario */
+#login h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo de los campos del formulario */
+#login form input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
 }
 
-#appointment-form button {
+#login form input:focus {
+    border-color: #8A2BE2;
+    outline: none;
+}
+
+/* Estilo de los botones */
+#login form button {
     width: 100%;
-    background: #8A2BE2;
-    color: white;
-    padding: 12px;
+    padding: 15px;
     border: none;
     border-radius: 5px;
+    background-color: #8A2BE2;
+    color: white;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-#appointment-form button:hover {
-    background: #6A0DAD;
+#login form button:hover {
+    background-color: #6A0DAD;
+}
+
+/* Estilo para el botón de Google */
+#google-login {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #db4437;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+#google-login:hover {
+    background-color: #c1351d;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Ajustar tamaños de los elementos en pantallas pequeñas */
+    #home {
+        padding: 50px 20px;
+    }
+
+    #login h2 {
+        font-size: 28px;
+    }
+
+    #login form {
+        padding: 20px;
+    }
+
+    #login form input, #login form button, #google-login {
+        font-size: 14px;
+        padding: 12px;
+    }
 }
 
 /* Footer */
@@ -165,44 +142,4 @@ footer {
     background: #6A0DAD;
     color: white;
     text-align: center;
-}
-
-/* Ajustes para el menú hamburguesa en móviles */
-@media screen and (max-width: 768px) {
-    #navbar {
-        display: none;
-    }
-
-    #mobile-menu {
-        display: none;
-    }
-
-    .w3-bar-item {
-        font-size: 18px;
-    }
-
-    .w3-hide-small {
-        display: none;
-    }
-
-    /* Ajustes en las secciones */
-    #home h1 {
-        font-size: 30px;
-    }
-
-    #home p {
-        font-size: 16px;
-    }
-
-    #services .w3-third {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-/* Ocultar el menú hamburguesa en pantallas grandes */
-@media screen and (min-width: 1024px) {
-    #mobile-menu {
-        display: none !important;
-    }
 }
